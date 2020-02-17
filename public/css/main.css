@@ -69,7 +69,7 @@
  * # base style overrides
  *
  * ------------------------------------------------------------------- */
-html {
+ html {
    font-size: 10px;
 }
 
@@ -4239,37 +4239,46 @@ footer h4::after {
 }
 
 
-
-/*  Overlay for images  
-.overlay__container {
-   position: relative;
+/* Image opacity with box */
+.imageOverlayContainer {
+  position: relative;
 }
 
-.overlay {
-   position: absolute;
-   top: 0;
-   bottom: 0;
-   left: 0;
-   right: 0;
-   opacity: 0;
-   transition: .5s ease;
-   background-color: black;
+.imageOverlay img {
+  opacity: 1;
+  display: block;
+  transition: .5s ease;
+  backface-visibility: hidden; 
 }
 
-.overlay__container:hover  .overlay {
-   opacity: 1;
-}
-
-.overlay__text {
-   color: white;
-   font-size: 20px;
-   font-family: "metropolis-medium", sans-serif;
-   position: absolute;
-   top: 50%;
-   left: 50%;
-   transform: translate(-50%, -50%);
+.imageOverlayMiddle .middle{
+  transition: .5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
+  text-align: center;
+  border-radius: 50%;
 }
-*/
+
+.imageOverlayContainer:hover img {
+  opacity: 0.3;
+}
+
+.imageOverlayContainer:hover .middle {
+  opacity: .5;
+  border-radius: 50%
+}
+
+.imageOverlayText text{
+  background-color: black;
+  color: white;
+  font-size: 8px;
+  font-family: "metropolis-medium", sans-serif;
+  padding: 10px 20px;
+}
+
 
 /*# sourceMappingURL=main.css.map */
