@@ -477,6 +477,11 @@ th:last-child, td:last-child {
    -webkit-overflow-scrolling: touch;
 }
 
+table#resume img{
+   width: 100%;
+   max-width: 50px;
+   height: auto;
+}
 
 /* ------------------------------------------------------------------- 
  * ## spacing 
