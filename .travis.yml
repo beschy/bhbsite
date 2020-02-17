@@ -1,0 +1,8 @@
+language: minimal
+script:
+  - echo "Deploying"
+install:
+  - npm install -g firebase-tools
+after_success:
+  - firebase deploy --token $FIREBASE_TOKEN
+  
